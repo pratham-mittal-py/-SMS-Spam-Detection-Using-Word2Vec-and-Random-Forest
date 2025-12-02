@@ -1,6 +1,3 @@
-Here is the properly formatted `README.md` content in Markdown format, ready for copy-paste:
-
-```markdown
 # SMS Spam Detection Using Word2Vec and Random Forest
 
 This project classifies SMS messages as spam or ham using Word2Vec embeddings and a Random Forest classifier.
@@ -63,4 +60,3 @@ Prediction: spam
 - Accuracy and classification metrics are printed after evaluation on the test set.
 
 > Note: Ensure consistent preprocessing between training and prediction.
-```
