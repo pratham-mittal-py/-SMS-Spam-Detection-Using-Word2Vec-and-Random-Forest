@@ -1,51 +1,66 @@
-Project: SMS Spam Detection Using Word2Vec and Random Forest
+Here is the properly formatted `README.md` content in Markdown format, ready for copy-paste:
+
+```markdown
+# SMS Spam Detection Using Word2Vec and Random Forest
 
 This project classifies SMS messages as spam or ham using Word2Vec embeddings and a Random Forest classifier.
 
-Dataset:
+## Dataset
 
-SMSSpamCollection.txt: A tab-separated file with two columns — 'label' (spam/ham) and 'message' (SMS text).
-Dependencies:
+- `SMSSpamCollection.txt`: A tab-separated file with two columns — `'label'` (spam/ham) and `'message'` (SMS text).
 
-pandas
-numpy
-scikit-learn
-gensim
-nltk
-tqdm
-Setup:
+## Dependencies
 
-Install required packages:
-pip install pandas numpy scikit-learn gensim nltk tqdm
-Download NLTK data:
-import nltk
-nltk.download('punkt')
-nltk.download('wordnet')
-Steps:
+- pandas
+- numpy
+- scikit-learn
+- gensim
+- nltk
+- tqdm
 
-Load and preprocess the SMS dataset.
-Clean messages by removing non-alphabetic characters, converting to lowercase, and lemmatizing.
-Tokenize messages into sentences and words using NLTK and Gensim.
-Train a Word2Vec model on the tokenized corpus.
-Generate document vectors using average Word2Vec embeddings.
-Prepare features (X) and labels (y), where labels are encoded as 1 for 'ham' and 0 for 'spam'.
-Split data into training and testing sets.
-Train a Random Forest classifier.
-Evaluate model using accuracy and classification report.
-Usage:
+## Setup
+
+1. Install required packages:
+   ```bash
+   pip install pandas numpy scikit-learn gensim nltk tqdm
+   ```
+
+2. Download NLTK data:
+   ```python
+   import nltk
+   nltk.download('punkt')
+   nltk.download('wordnet')
+   ```
+
+## Steps
+
+1. Load and preprocess the SMS dataset.
+2. Clean messages by removing non-alphabetic characters, converting to lowercase, and lemmatizing.
+3. Tokenize messages into sentences and words using NLTK and Gensim.
+4. Train a Word2Vec model on the tokenized corpus.
+5. Generate document vectors using average Word2Vec embeddings.
+6. Prepare features (X) and labels (y), where labels are encoded as 1 for 'ham' and 0 for 'spam'.
+7. Split data into training and testing sets.
+8. Train a Random Forest classifier.
+9. Evaluate model using accuracy and classification report.
+
+## Usage
+
 After training, the system accepts a new SMS message from the user, preprocesses it identically to the training data, converts it to a Word2Vec average vector, and predicts whether it is spam or ham.
 
-Input Example:
+**Input Example:**
+```
 Enter an SMS message: Congratulations! You've won a free iPhone.
+```
 
-Output Example:
+**Output Example:**
+```
 Prediction: spam
+```
 
-Model Performance:
+## Model Performance
 
-Accuracy and classification metrics are printed after evaluation on the test set.
-Note:
+- Accuracy and classification metrics are printed after evaluation on the test set.
 
-The Word2Vec model uses min_count=5 and vector_size=100.
-Messages with no words in the Word2Vec vocabulary are represented as zero vectors.
-Ensure consistent preprocessing between training and prediction.
+> Note: Ensure consistent preprocessing between training and prediction.
+```
